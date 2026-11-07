@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AnatoLearn - Anatomi öğrenme ve görsel tanıma platformu">
+  <title>AnatoLearn | Anatomi öğrenme platformu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="AnatoLearn ana sayfa"><span class="brand-mark">A</span><span>Anato<span>Learn</span></span></a>
+    <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" data-nav="home">Ana Sayfa</a>
+      <a href="#boards" data-nav="boards">Anatomi Kurulları</a>
+      <a href="#atlas" data-nav="atlas">İnteraktif Atlas</a>
+      <a href="#quiz" data-nav="quiz">Sınav Merkezi</a>
+    </nav>
+    <a class="header-cta" href="#boards">Öğrenmeye başla <span>→</span></a>
+  </header>
+
+  <main id="app">
+    <section class="view active" id="homeView">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> TIP ÖĞRENCİLERİ İÇİN ANATOMİ PLATFORMU</span>
+          <h1>Anatomiyi görerek<br><em>öğren, tanı, hatırla.</em></h1>
+          <p>Anatomik yapıları interaktif görsellerle keşfet. Konu anlatımlarını incele, görsel tanıma testleriyle bilgini pekiştir.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#boards">Kurulları keşfet <span>→</span></a>
+            <a class="button button-quiet" href="#quiz">Görsel teste git</a>
+          </div>
+          <div class="hero-proof"><span class="proof-icon">✦</span> Görsel odaklı öğrenme deneyimi</div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+          <div class="heart-visual-card">
+            <div class="visual-card-top"><span>ANATOMİ ATLASI</span><span class="live-dot">●</span></div>
+            <img src="assets/images/heart/heart-internal-schematic.svg" alt="Kalbin iç anatomisinin şematik gösterimi">
+            <div class="visual-label label-one"><i></i> Atrium dextrum</div>
+            <div class="visual-label label-two"><i></i> Ventriculus sinister</div>
+          </div>
+          <div class="floating-note"><span class="note-icon">✓</span><span><b>Aktif öğrenme</b><small>Görsel tanıma pratiği</small></span></div>
+        </div>
+      </div>
+      <section class="section-block">
+        <div class="section-heading"><div><span class="eyebrow">ÖĞRENME YOLCULUĞUN</span><h2>Anatomi kurulları</h2></div><a class="text-link" href="#boards">Tüm kurulları gör →</a></div>
+        <div class="board-grid" id="homeBoardGrid"></div>
+      </section>
+      <section class="feature-strip">
+        <div><span class="feature-number">01</span><h3>Görsel atlas</h3><p>Anatomik yapıları görseller üzerinden keşfet.</p></div>
+        <div><span class="feature-number">02</span><h3>Aktif tekrar</h3><p>İşaretlenmiş yapıları dört seçenek arasından tanı.</p></div>
+        <div><span class="feature-number">03</span><h3>Anında geri bildirim</h3><p>Cevabını kontrol et, açıklamayla pekiştir.</p></div>
+      </section>
+    </section>
+
+    <section class="view page-view" id="boardsView">
+      <div class="page-intro"><span class="eyebrow">ANATOLEARN / ÖĞRENME ALANI</span><h1>Anatomi kurulları</h1><p>Çalışmak istediğin kurulu seçerek konu içeriklerine ve görsel testlere ulaş.</p></div>
+      <div class="board-grid board-grid-large" id="allBoardGrid"></div>
+    </section>
+
+    <section class="view page-view" id="circulationView">
+      <div class="breadcrumb"><a href="#home">Ana Sayfa</a><span>/</span><a href="#boards">Anatomi Kurulları</a><span>/</span><b>Dolaşım Sistemi</b></div>
+      <div class="page-intro"><span class="eyebrow">ANATOMİ KURULU 02</span><h1>Dolaşım Sistemi</h1><p>Kalp, damarlar ve lenfatik sistemin anatomik yapılarını konu konu keşfet.</p></div>
+      <div class="course-layout">
+        <aside class="course-sidebar" id="courseSidebar">
+          <button class="sidebar-toggle" id="sidebarToggle" aria-expanded="true">☰ <span>Kurul içeriği</span><b>−</b></button>
+          <div class="sidebar-content">
+            <div class="sidebar-group"><span class="sidebar-caption">DOLAŞIM SİSTEMİ</span>
+              <a class="sidebar-link selected" href="#heart"><span>♡</span> Kalp Anatomisi</a>
+              <a class="sidebar-link disabled" href="#circulation"><span>↗</span> Arterler <small>Yakında</small></a>
+              <a class="sidebar-link disabled" href="#circulation"><span>↙</span> Venler <small>Yakında</small></a>
+              <a class="sidebar-link disabled" href="#circulation"><span>◎</span> Lenfatik Sistem <small>Yakında</small></a>
+            </div>
+          </div>
+        </aside>
+        <div class="course-content">
+          <div class="content-banner"><div><span class="eyebrow">KURUL ÖZETİ</span><h2>Kalp ve dolaşımın temelleri</h2><p>Kalbin odacıklarını, kapaklarını ve büyük damarlarla ilişkisini öğren.</p></div><div class="banner-icon">♡</div></div>
+          <h2 class="content-title">Konu başlıkları</h2>
+          <div class="topic-list">
+            <a class="topic-row" href="#heart"><span class="topic-icon">01</span><span><b>Kalp Anatomisi</b><small>Genel anatomi, dış ve iç yapı, kapaklar</small></span><span class="topic-arrow">→</span></a>
+            <div class="topic-row muted"><span class="topic-icon">02</span><span><b>Arterler</b><small>Aorta ve sistemik arterler</small></span><span class="coming">Yakında</span></div>
+            <div class="topic-row muted"><span class="topic-icon">03</span><span><b>Venler</b><small>Vena cava ve venöz sistem</small></span><span class="coming">Yakında</span></div>
+            <div class="topic-row muted"><span class="topic-icon">04</span><span><b>Lenfatik Sistem</b><small>Lenf damarları ve lenfoid organlar</small></span><span class="coming">Yakında</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page-view" id="heartView">
+      <div class="breadcrumb"><a href="#home">Ana Sayfa</a><span>/</span><a href="#circulation">Dolaşım Sistemi</a><span>/</span><b>Kalp Anatomisi</b></div>
+      <div class="page-intro"><span class="eyebrow">DOLAŞIM SİSTEMİ / KONU 01</span><h1>Kalp Anatomisi</h1><p>Kalbin odacıklarını, kapaklarını ve iç anatomisini sistematik olarak incele.</p></div>
+      <div class="heart-lesson">
+        <div class="lesson-main">
+          <div class="lesson-image"><img src="assets/images/heart/heart-internal-schematic.svg" alt="Kalbin iç anatomisi şematik çizimi"></div>
+          <span class="eyebrow">KONUYA GENEL BAKIŞ</span><h2>Kalbin iç anatomisi</h2>
+          <p>Kalp, septumlar ile sağ ve sol bölümlere ayrılır. Her bölümde bir atrium ve bir ventriculus bulunur. Atriumlar kanı ventriküllere, ventriküller ise ilgili dolaşım sistemine pompalar.</p>
+          <div class="info-callout"><b>Çalışma ipucu</b><p>Sağ kalp venöz kanı akciğerlere, sol kalp oksijenlenmiş kanı sistemik dolaşıma gönderir. Kapaklar kanın tek yönlü akışını destekler.</p></div>
+        </div>
+        <aside class="lesson-aside">
+          <div class="aside-card"><span class="eyebrow">BU KONUDA</span><h3>Öğrenme başlıkları</h3>
+            <ul><li>Sağ ve sol atrium</li><li>Sağ ve sol ventrikül</li><li>Kalp kapakları</li><li>Trabeculae carneae</li><li>Musculi papillares</li><li>Septum interventriculare</li></ul>
+          </div>
+          <div class="aside-card quiz-promo"><span class="promo-icon">✦</span><h3>Bilgini test et</h3><p>Kalp anatomisi görsel tanıma testini çözerek öğrendiklerini pekiştir.</p><a class="button button-primary button-full" href="#quiz">Teste başla →</a></div>
+        </aside>
+      </div>
+      <div class="lesson-footer"><a class="text-link" href="#circulation">← Dolaşım Kurulu</a><a class="button button-primary" href="#quiz">Görsel teste geç →</a></div>
+    </section>
+
+    <section class="view page-view" id="quizView">
+      <div class="breadcrumb"><a href="#home">Ana Sayfa</a><span>/</span><a href="#circulation">Dolaşım Sistemi</a><span>/</span><b>Görsel Tanıma Testi</b></div>
+      <div class="quiz-heading"><div><span class="eyebrow">DOLAŞIM SİSTEMİ / KALP</span><h1>Visual Anatomy Quiz</h1><p>Okla gösterilen anatomik yapıyı doğru seçenekler arasından belirle.</p></div><div class="quiz-tag">5 SORULUK TEST</div></div>
+      <div class="quiz-filters">
+        <label>Kurul<select id="boardFilter"><option value="circulation">Dolaşım Sistemi</option></select></label>
+        <label>Konu<select id="topicFilter"><option value="all">Tüm konular</option><option value="right-atrium">Sağ atrium</option><option value="right-ventricle">Sağ ventrikül</option><option value="atrioventricular-valves">Atriyoventriküler kapaklar</option><option value="interventricular-septum">Interventriküler septum</option></select></label>
+        <label>Zorluk<select id="difficultyFilter"><option value="all">Tüm seviyeler</option><option value="easy">Kolay</option><option value="medium">Orta</option><option value="hard">Zor</option></select></label>
+        <button class="filter-button" id="applyFilters">Testi başlat</button>
+      </div>
+      <div class="quiz-shell" id="quizShell">
+        <div class="quiz-topline"><span id="questionCounter">Soru 1 / 5</span><span id="questionCategory">Kalp Anatomisi</span></div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="quiz-question"><span class="question-kicker">ANATOMİK YAPIYI TANI</span><h2 id="questionText">Görselde ok ile gösterilen anatomik yapı hangisidir?</h2></div>
+        <div class="quiz-body">
+          <div class="quiz-image-panel">
+            <div class="image-panel-top"><span>ANATOMİK GÖRSEL</span><span class="zoom-hint">Şematik çizim</span></div>
+            <div class="anatomy-image-wrap" id="anatomyImageWrap">
+              <img id="questionImage" src="" alt="">
+              <svg id="markerOverlay" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+                <defs><marker id="arrowHead" markerWidth="12" markerHeight="12" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#e6a23c" stroke-width="1.8"/></marker></defs>
+                <line id="markerLine" x1="0" y1="0" x2="0" y2="0" marker-end="url(#arrowHead)"/>
+                <circle id="markerTarget" cx="0" cy="0" r="10"/>
+              </svg>
+            </div>
+            <p class="image-caption">Ok işaretinin gösterdiği yapıyı belirle.</p>
+          </div>
+          <div class="answer-panel">
+            <div class="answer-panel-heading"><span>CEVAP SEÇENEKLERİ</span><small>Bir seçenek işaretle</small></div>
+            <div class="option-list" id="optionList"></div>
+            <div class="feedback" id="feedback" aria-live="polite" hidden></div>
+            <button class="button button-primary button-full" id="checkAnswer" disabled>Cevabı kontrol et</button>
+            <button class="button button-primary button-full" id="nextQuestion" hidden>Sonraki soru →</button>
+          </div>
+        </div>
+      </div>
+      <div class="quiz-complete" id="quizComplete" hidden></div>
+    </section>
+
+    <section class="view page-view" id="atlasView">
+      <div class="page-intro"><span class="eyebrow">ANATOLEARN / KEŞFET</span><h1>İnteraktif Atlas</h1><p>İnteraktif atlasın ilk sürümü hazırlık aşamasında. Kalp anatomisi görselleri konu sayfasında yer alıyor.</p><a class="button button-primary" href="#heart">Kalp anatomisine git →</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">A</span><span>Anato<span>Learn</span></span></a><p>Görerek öğren, anlayarak hatırla.</p><span>© 2026 AnatoLearn · Eğitim prototipi</span></footer>
+</body>
+</html>
